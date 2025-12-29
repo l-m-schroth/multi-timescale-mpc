@@ -1,0 +1,11 @@
+casadi==3.7.0
+control==0.10.1
+matplotlib==3.10.3
+mediapy==1.2.4
+mujoco==3.3.2
+numpy==2.2.6
+scipy==1.15.3
+setuptools==59.6.0
+sympy==1.14.0
+jupyter
+ipykernel

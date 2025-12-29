@@ -1,0 +1,14 @@
+# Ignore Python bytecode 
+__pycache__/
+*.py[cod] 
+
+# Ignore metadata
+*.egg-info/
+
+# ignore every c_generated_code folder anywhere
+c_generated_code/
+*.c
+
+# ignore solvers
+solvers/
+

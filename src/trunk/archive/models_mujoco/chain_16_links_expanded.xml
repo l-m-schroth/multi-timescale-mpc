@@ -1,0 +1,131 @@
+<mujoco model="cable_trunk_model_example">
+  <compiler angle="radian"/>
+
+  <extension>
+    <plugin plugin="mujoco.elasticity.cable"/>
+  </extension>
+
+  <custom>
+    <text name="composite_actuated" data="rope_actuated"/>
+  </custom>
+
+  <asset>
+    <texture type="2d" name="grid" builtin="checker" rgb1="0.1 0.2 0.3" rgb2="0.2 0.3 0.4" width="300" height="300"/>
+    <material name="grid" texture="grid" texrepeat="8 8" reflectance="0.2"/>
+  </asset>
+
+  <worldbody>
+    <camera name="yz_view" pos="0 -1.3 0.35" xyaxes="1 0 0 0 0 1"/>
+    <geom size="10 10 0.01" type="plane" material="grid"/>
+    <light pos="0 0 2" dir="0 0 -1"/>
+    <body name="actuatedB_first" pos="0 0 0.7" quat="0 -0.707107 0 0.707107">
+      <joint name="actuatedJ_0" pos="0 0 0" type="hinge" axis="0 1 0" group="3" stiffness="3" actuatorfrclimited="false" damping="0.15"/>
+      <geom name="actuatedG0" size="0.005 0.015625" pos="0.015625 0 0" quat="0.707107 0 -0.707107 0" type="capsule" rgba="0.8 0.2 0.1 1"/>
+      <site name="actuatedS_first" pos="0 0 0" group="3"/>
+      <body name="actuatedB_1" pos="0.03125 0 0">
+        <joint name="actuatedJ_1" pos="0 0 0" type="hinge" axis="0 1 0" group="3" stiffness="3" actuatorfrclimited="false" damping="0.15"/>
+        <geom name="actuatedG1" size="0.005 0.015625" pos="0.015625 0 0" quat="0.707107 0 -0.707107 0" type="capsule" rgba="0.8 0.2 0.1 1"/>
+        <body name="actuatedB_2" pos="0.03125 0 0">
+          <joint name="actuatedJ_2" pos="0 0 0" type="hinge" axis="0 1 0" group="3" stiffness="3" actuatorfrclimited="false" damping="0.15"/>
+          <geom name="actuatedG2" size="0.005 0.015625" pos="0.015625 0 0" quat="0.707107 0 -0.707107 0" type="capsule" rgba="0.8 0.2 0.1 1"/>
+          <body name="actuatedB_3" pos="0.03125 0 0">
+            <joint name="actuatedJ_3" pos="0 0 0" type="hinge" axis="0 1 0" group="3" stiffness="3" actuatorfrclimited="false" damping="0.15"/>
+            <geom name="actuatedG3" size="0.005 0.015625" pos="0.015625 0 0" quat="0.707107 0 -0.707107 0" type="capsule" rgba="0.8 0.2 0.1 1"/>
+            <body name="actuatedB_4" pos="0.03125 0 0">
+              <joint name="actuatedJ_4" pos="0 0 0" type="hinge" axis="0 1 0" group="3" stiffness="3" actuatorfrclimited="false" damping="0.15"/>
+              <geom name="actuatedG4" size="0.005 0.015625" pos="0.015625 0 0" quat="0.707107 0 -0.707107 0" type="capsule" rgba="0.8 0.2 0.1 1"/>
+              <body name="actuatedB_5" pos="0.03125 0 0">
+                <joint name="actuatedJ_5" pos="0 0 0" type="hinge" axis="0 1 0" group="3" stiffness="3" actuatorfrclimited="false" damping="0.15"/>
+                <geom name="actuatedG5" size="0.005 0.015625" pos="0.015625 0 0" quat="0.707107 0 -0.707107 0" type="capsule" rgba="0.8 0.2 0.1 1"/>
+                <body name="actuatedB_6" pos="0.03125 0 0">
+                  <joint name="actuatedJ_6" pos="0 0 0" type="hinge" axis="0 1 0" group="3" stiffness="3" actuatorfrclimited="false" damping="0.15"/>
+                  <geom name="actuatedG6" size="0.005 0.015625" pos="0.015625 0 0" quat="0.707107 0 -0.707107 0" type="capsule" rgba="0.8 0.2 0.1 1"/>
+                  <body name="actuatedB_7" pos="0.03125 0 0">
+                    <joint name="actuatedJ_7" pos="0 0 0" type="hinge" axis="0 1 0" group="3" stiffness="3" actuatorfrclimited="false" damping="0.15"/>
+                    <geom name="actuatedG7" size="0.005 0.015625" pos="0.015625 0 0" quat="0.707107 0 -0.707107 0" type="capsule" rgba="0.8 0.2 0.1 1"/>
+                    <body name="actuatedB_8" pos="0.03125 0 0">
+                      <joint name="actuatedJ_8" pos="0 0 0" type="hinge" axis="0 1 0" group="3" stiffness="3" actuatorfrclimited="false" damping="0.15"/>
+                      <geom name="actuatedG8" size="0.005 0.015625" pos="0.015625 0 0" quat="0.707107 0 -0.707107 0" type="capsule" rgba="0.8 0.2 0.1 1"/>
+                      <body name="actuatedB_9" pos="0.03125 0 0">
+                        <joint name="actuatedJ_9" pos="0 0 0" type="hinge" axis="0 1 0" group="3" stiffness="3" actuatorfrclimited="false" damping="0.15"/>
+                        <geom name="actuatedG9" size="0.005 0.015625" pos="0.015625 0 0" quat="0.707107 0 -0.707107 0" type="capsule" rgba="0.8 0.2 0.1 1"/>
+                        <body name="actuatedB_10" pos="0.03125 0 0">
+                          <joint name="actuatedJ_10" pos="0 0 0" type="hinge" axis="0 1 0" group="3" stiffness="3" actuatorfrclimited="false" damping="0.15"/>
+                          <geom name="actuatedG10" size="0.005 0.015625" pos="0.015625 0 0" quat="0.707107 0 -0.707107 0" type="capsule" rgba="0.8 0.2 0.1 1"/>
+                          <body name="actuatedB_11" pos="0.03125 0 0">
+                            <joint name="actuatedJ_11" pos="0 0 0" type="hinge" axis="0 1 0" group="3" stiffness="3" actuatorfrclimited="false" damping="0.15"/>
+                            <geom name="actuatedG11" size="0.005 0.015625" pos="0.015625 0 0" quat="0.707107 0 -0.707107 0" type="capsule" rgba="0.8 0.2 0.1 1"/>
+                            <body name="actuatedB_12" pos="0.03125 0 0">
+                              <joint name="actuatedJ_12" pos="0 0 0" type="hinge" axis="0 1 0" group="3" stiffness="3" actuatorfrclimited="false" damping="0.15"/>
+                              <geom name="actuatedG12" size="0.005 0.015625" pos="0.015625 0 0" quat="0.707107 0 -0.707107 0" type="capsule" rgba="0.8 0.2 0.1 1"/>
+                              <body name="actuatedB_13" pos="0.03125 0 0">
+                                <joint name="actuatedJ_13" pos="0 0 0" type="hinge" axis="0 1 0" group="3" stiffness="3" actuatorfrclimited="false" damping="0.15"/>
+                                <geom name="actuatedG13" size="0.005 0.015625" pos="0.015625 0 0" quat="0.707107 0 -0.707107 0" type="capsule" rgba="0.8 0.2 0.1 1"/>
+                                <body name="actuatedB_14" pos="0.03125 0 0">
+                                  <joint name="actuatedJ_14" pos="0 0 0" type="hinge" axis="0 1 0" group="3" stiffness="3" actuatorfrclimited="false" damping="0.15"/>
+                                  <geom name="actuatedG14" size="0.005 0.015625" pos="0.015625 0 0" quat="0.707107 0 -0.707107 0" type="capsule" rgba="0.8 0.2 0.1 1"/>
+                                  <body name="actuatedB_last" pos="0.03125 0 0">
+                                    <joint name="actuatedJ_15" pos="0 0 0" type="hinge" axis="0 1 0" group="3" stiffness="3" actuatorfrclimited="false" damping="0.15"/>
+                                    <geom name="actuatedG15" size="0.005 0.015625" pos="0.015625 0 0" quat="0.707107 0 -0.707107 0" type="capsule" rgba="0.8 0.2 0.1 1"/>
+                                    <site name="actuatedS_last" pos="0.03125 0 0" group="3"/>
+                                    <site name="endeffector" pos="0.03125 0 0"/> 
+                                  </body>
+                                </body>
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <motor name="actuator_0" joint="actuatedJ_0" gear="2"/>
+    <motor name="actuator_1" joint="actuatedJ_1" gear="2"/>
+    <motor name="actuator_2" joint="actuatedJ_2" gear="2"/>
+    <motor name="actuator_3" joint="actuatedJ_3" gear="2"/>
+    <motor name="actuator_4" joint="actuatedJ_4" gear="2"/>
+    <motor name="actuator_5" joint="actuatedJ_5" gear="2"/>
+    <motor name="actuator_6" joint="actuatedJ_6" gear="2"/>
+    <motor name="actuator_7" joint="actuatedJ_7" gear="2"/>
+    <motor name="actuator_8" joint="actuatedJ_8" gear="2"/>
+    <motor name="actuator_9" joint="actuatedJ_9" gear="2"/>
+    <motor name="actuator_10" joint="actuatedJ_10" gear="2"/>
+    <motor name="actuator_11" joint="actuatedJ_11" gear="2"/>
+    <motor name="actuator_12" joint="actuatedJ_12" gear="2"/>
+    <motor name="actuator_13" joint="actuatedJ_13" gear="2"/>
+    <motor name="actuator_14" joint="actuatedJ_14" gear="2"/>
+    <motor name="actuator_15" joint="actuatedJ_15" gear="2"/>
+  </actuator>
+
+  <contact>
+    <exclude body1="actuatedB_first" body2="actuatedB_1"/>
+    <exclude body1="actuatedB_1" body2="actuatedB_2"/>
+    <exclude body1="actuatedB_2" body2="actuatedB_3"/>
+    <exclude body1="actuatedB_3" body2="actuatedB_4"/>
+    <exclude body1="actuatedB_4" body2="actuatedB_5"/>
+    <exclude body1="actuatedB_5" body2="actuatedB_6"/>
+    <exclude body1="actuatedB_6" body2="actuatedB_7"/>
+    <exclude body1="actuatedB_7" body2="actuatedB_8"/>
+    <exclude body1="actuatedB_8" body2="actuatedB_9"/>
+    <exclude body1="actuatedB_9" body2="actuatedB_10"/>
+    <exclude body1="actuatedB_10" body2="actuatedB_11"/>
+    <exclude body1="actuatedB_11" body2="actuatedB_12"/>
+    <exclude body1="actuatedB_12" body2="actuatedB_13"/>
+    <exclude body1="actuatedB_13" body2="actuatedB_14"/>
+    <exclude body1="actuatedB_14" body2="actuatedB_last"/>
+  </contact>
+
+  <visual>
+  <global offwidth="1920" offheight="1080"/>
+  </visual>
+  
+</mujoco>

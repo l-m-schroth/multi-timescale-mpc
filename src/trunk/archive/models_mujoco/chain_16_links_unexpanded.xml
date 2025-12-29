@@ -1,0 +1,30 @@
+<mujoco model="cable_trunk_model_example">
+  <extension>
+    <plugin plugin="mujoco.elasticity.cable"/>
+  </extension>
+
+  <asset>
+      <!-- Optional material and texture assets if needed -->
+      <texture name="grid" type="2d" builtin="checker" rgb1=".1 .2 .3" rgb2=".2 .3 .4" width="300" height="300"/>
+      <material name="grid" texture="grid" texrepeat="8 8" reflectance=".2"/>
+  </asset>
+
+  <worldbody>
+    <light pos="0 0 2.0"/> 
+    <!-- Ground plane -->
+    <geom size="10 10 .01" type="plane" material="grid"/>
+    <composite prefix="actuated" type="cable" 
+                vertex="0.00000 0.00000 0.70000 0.00000 0.00000 0.66875 0.00000 0.00000 0.63750 0.00000 0.00000 0.60625 0.00000 0.00000 0.57500 0.00000 0.00000 0.54375 0.00000 0.00000 0.51250 0.00000 0.00000 0.48125 0.00000 0.00000 0.45000 0.00000 0.00000 0.41875 0.00000 0.00000 0.38750 0.00000 0.00000 0.35625 0.00000 0.00000 0.32500 0.00000 0.00000 0.29375 0.00000 0.00000 0.26250 0.00000 0.00000 0.23125 0.00000 0.00000 0.20000"
+                size="0.2 .1 6" initial="none">
+        <joint kind="main" damping="0.15" stiffness="3.0"/>
+        <geom type="capsule" size=".005" rgba=".8 .2 .1 1"/>
+    </composite>
+  </worldbody>
+
+  <!--
+  <equality>
+    <weld name="Connection_world" body1="actuatedB_last"/>
+  </equality>
+  -->
+
+</mujoco>
